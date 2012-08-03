@@ -29,13 +29,12 @@
         hold: false
       })
       .bind("swipe", function(e) {
-        alert(e.direction)
         if (e.direction == 'left') {
-          alert('Swipe Left! Show '+this.next().attr('id'))
-          this.next().click()
+          alert('Swipe Left!')
+          //this.next().click()
         } else if (e.direction == 'right') {
-          alert('Swipe Left! Show '+this.prev().attr('id'))
-          this.prev().click()
+          alert('Swipe Right!')
+          //this.prev().click()
         }
       });
 
