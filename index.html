@@ -1,62 +1,111 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset=utf-8>
+  <title>Bantr 2</title>
+  <link rel="stylesheet" href="css/slack.css" type="text/css" charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/slackr.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Slackr : Stackable/Slideable elements - slackers!" />
+      $('.slacker').on('click', function() {
+        $('.focus').removeClass('focus')
+        $(this).addClass('focus')
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+        $('#slack').slackr();
+      })
 
-    <title>Slackr</title>
-  </head>
+      $('#slack').slackr();
 
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/subpar/slackr">View on GitHub</a>
-
-          <h1 id="project_title">Slackr</h1>
-          <h2 id="project_tagline">Stackable/Slideable elements - slackers!</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/subpar/slackr/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/subpar/slackr/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+    })
+  </script>
+</head>
+<body>
+  <div id="navbar">
+    <div class="liner">
+      Slackr
     </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>Slackr</h1>
-
-<p>Slackr is a lightweight jQuery plugin that allows for elements such as divs, images etc to be 'stacked', whilst smoothly animating (or 'sliding'). Hence the name, Slackr.</p>
-
-<h2>TODO</h2>
-
-<p>The following is my to-do list:</p>
-
-<ul>
-<li>Cleanup the math (it's terrible!)</li>
-<li>Provide a better fallback style for non-JS browsers</li>
-<li>Decide how much/little CSS to apply in the JS</li>
-<li>Finish this readme...</li>
-</ul>
-      </section>
+  </div>
+  <div id="sidebar">
+    <div class="liner clear">
+      <p>Sidebar</p>
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Slackr maintained by <a href="https://github.com/subpar">subpar</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
+  </div>
+  <div id="slack">
+    <div class="slacker" id="primary">
+      <div class="liner clear">
+        <div class="match">Match 1</div>
+        <div class="match">Match 2</div>
+        <div class="match">Match 3</div>
+        <div class="match">Match 4</div>
+        <div class="match">Match 5</div>
+        <div class="match">Match 6</div>
+        <div class="match">Match 7</div>
+        <div class="match">Match 8</div>
+        <div class="match">Match 9</div>
+        <div class="match">Match 10</div>
+        <div class="match">Match 11</div>
+        <div class="match">Match 12</div>
+        <div class="match">Match 13</div>
+        <div class="match">Match 14</div>
+        <div class="match">Match 15</div>
+        <div class="match">Match 16</div>
+        <div class="match">Match 17</div>
+        <div class="match">Match 18</div>
+      </div>
     </div>
-
-    
-
-  </body>
+    <div class="slacker" id="secondary">
+      <div class="liner clear">
+        <p>Match detail here</p>
+      </div>
+    </div>
+    <div class="slacker" id="tertiary">
+      <div class="liner clear">
+        <div class="activity">Activity 1</div>
+        <div class="activity">Activity 2</div>
+        <div class="activity">Activity 3</div>
+        <div class="activity">Activity 4</div>
+        <div class="activity">Activity 5</div>
+        <div class="activity">Activity 6</div>
+        <div class="activity">Activity 7</div>
+        <div class="activity">Activity 8</div>
+        <div class="activity">Activity 9</div>
+        <div class="activity">Activity 10</div>
+        <div class="activity">Activity 11</div>
+        <div class="activity">Activity 12</div>
+        <div class="activity">Activity 13</div>
+        <div class="activity">Activity 14</div>
+        <div class="activity">Activity 15</div>
+        <div class="activity">Activity 16</div>
+        <div class="activity">Activity 17</div>
+        <div class="activity">Activity 18</div>
+        <div class="activity">Activity 19</div>
+        <div class="activity">Activity 20</div>
+      </div>
+    </div>
+    <div class="slacker" id="quaternary">
+      <div class="liner clear">
+        <div class="activity">Activity 1</div>
+        <div class="comment">Comment 1</div>
+        <div class="comment">Comment 2</div>
+        <div class="comment">Comment 3</div>
+        <div class="comment">Comment 4</div>
+        <div class="comment">Comment 5</div>
+        <div class="comment">Comment 6</div>
+        <div class="comment">Comment 7</div>
+      </div>
+    </div>
+    <div class="slacker" id="five">
+      <div class="liner clear">
+        <p>Fifth</p>
+      </div>
+    </div>
+    <div class="slacker" id="six">
+      <div class="liner clear">
+        <p>Sixth</p>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
