@@ -20,13 +20,21 @@
 
       $('#slack').slackr();
 
+      $('#slack').hammer({
+        prevent_default: true,
+        drag: false,
+        tap: false,
+        tap_double: false,
+        hold: false,
+        swipe: false
+      })
+
       $(".slacker").hammer({
         drag: false,
         tap: false,
         tap_double: false,
         hold: false,
-        swipe_time: 1000,
-        prevent_default: true
+        swipe_time: 1000
       })
       .bind("swipe", function(e) {
         if ($(this).hasClass('focus')) {
@@ -43,7 +51,7 @@
     })
   </script>
 </head>
-<body>
+<body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
   <div id="navbar">
     <div class="liner">
       Slackr
