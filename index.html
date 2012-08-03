@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="css/slack.css" type="text/css" charset="utf-8">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="js/slackr.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/hammer.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/jquery.hammer.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
 
@@ -17,6 +19,20 @@
       })
 
       $('#slack').slackr();
+
+      $(".slacker").hammer({
+        drag: false,
+        tap: false,
+        tap_double: false,
+        hold: false
+      })
+      .bind("swipe", function(e) {
+        if (e.direction == 'left') {
+          this.next().click()
+        } else {
+          this.prev().click()
+        }
+      });
 
     })
   </script>
