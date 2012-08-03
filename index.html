@@ -24,13 +24,18 @@
         drag: false,
         tap: false,
         tap_double: false,
-        hold: false
+        hold: false,
+        swipe_time: 1000
       })
       .bind("swipe", function(e) {
-        if (e.direction == 'left') {
-          $(this).next().click()
-        } else if (e.direction == 'right') {
-          $(this).prev().click()
+        if $(this).hasClass('focus') {
+          if (e.direction == 'left') {
+            $(this).next().click()
+          } else if (e.direction == 'right') {
+            $(this).prev().click()
+          }
+        } else {
+          $(this).click()
         }
       });
 
