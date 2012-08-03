@@ -11,11 +11,6 @@
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
 
-      $('body').ontouchmove = function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-      };
-
       $('.slacker').on('click', function() {
         $('.focus').removeClass('focus')
         $(this).addClass('focus')
@@ -30,7 +25,8 @@
         tap: false,
         tap_double: false,
         hold: false,
-        swipe_time: 1000
+        swipe_time: 1000,
+        prevent_default: true
       })
       .bind("swipe", function(e) {
         if ($(this).hasClass('focus')) {
