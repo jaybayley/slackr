@@ -28,7 +28,7 @@
         swipe_time: 1000
       })
       .bind("swipe", function(e) {
-        if $(this).hasClass('focus') {
+        if ($(this).hasClass('focus')) {
           if (e.direction == 'left') {
             $(this).next().click()
           } else if (e.direction == 'right') {
