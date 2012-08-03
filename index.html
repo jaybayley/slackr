@@ -29,7 +29,7 @@
         hold: false
       })
       .bind("swipe", function(e) {
-        alert(e)
+        alert(Object.keys(e))
         if (e.direction == 'left') {
           alert('Swipe Left! Show '+this.next().attr('id'))
           this.next().click()
