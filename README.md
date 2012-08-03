@@ -6,9 +6,9 @@ Slackr is a lightweight jQuery plugin that allows for elements such as divs, ima
 Demo
 ----
 
-To check out Slackr in action, view [the demo](http://subpar.github.com/slackr/)
+To check out Slackr in action, view [the demo](http://subpar.github.com/slackr/).
 
-TODO
+Todo
 ----
 
 The following is my to-do list:
