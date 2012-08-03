@@ -24,11 +24,12 @@
 
       $(".slacker").hammer({
         drag: false,
+        tap: false,
         tap_double: false,
         hold: false
       })
       .bind("swipe", function(e) {
-        alert('Swiped!')
+        alert(e)
         if (e.direction == 'left') {
           alert('Swipe Left! Show '+this.next().attr('id'))
           this.next().click()
@@ -36,9 +37,6 @@
           alert('Swipe Left! Show '+this.prev().attr('id'))
           this.prev().click()
         }
-      })
-      .bind("tap", function(e) {
-        alert('Tapped!')
       });
 
     })
