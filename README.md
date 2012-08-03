@@ -3,6 +3,11 @@ Slackr
 
 Slackr is a lightweight jQuery plugin that allows for elements such as divs, images etc to be 'stacked', whilst smoothly animating (or 'sliding'). Hence the name, Slackr.
 
+Demo
+----
+
+To check out Slackr in action, view [the demo](http://subpar.github.com/slackr/)
+
 TODO
 ----
 
